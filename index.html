@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pam's Start Work Page !</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pam's Start Page !</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <script>
+    // Refactor to change the greeting at target time instead of on load
     function getTime() {
         const today = new Date()
         const curHr = today.getHours()
@@ -16,135 +22,127 @@
         }
     }
   </script>
-  <style>
-    html {
-      align-items: center;
-      background-color: #CEC9EC;
-      color: #132565;
-      display: flex;
-      font: 22px 'Courier New', monospace;
-      height: 100%;
-      justify-content: center;
-      margin: 0;
-    }
-
-    body {
-      display: flex;
-      margin: 1em;
-      padding: 1em;
-    }
-
-    h1 {
-      font-size: 2em;
-      grid-column: 1 / -1;
-      margin: 0;
-      text-align: center;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a:focus,
-    a:hover {
-      color: #1d81b2;
-    }
-
-    nav {
-      display: grid;
-      grid-row-gap: 1em;
-      grid-template-columns: 3fr 3fr; 
-      margin: 1em;
-      min-width: 30em;
-      padding: 1em;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      white-space: nowrap;
-
-    }
-
-    li:first-child {
-      font-weight: bold;
-      line-height: 2em;
-    }
-
-    iframe {
-      height: auto;
-      object-fit: cover;
-      object-position: 50% 100%;
-      width: 8em;
-    }
-
-    .giphy-embed {
-      flex-wrap: nowrap;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body onLoad="getTime()">
-  <div style="width:100%;height:auto;margin-right:4rem;flex-wrap:nowrap">
-    <iframe
-      src="https://giphy.com/embed/l4FGI8GoTL7N4DsyI"
-      width="100%"
-      height="100%"
-      style="position:absolute"
-      frameBorder="0"
-      class="giphy-embed"
-      allowFullScreen>
-    </iframe>
-  </div>
+  <h1 id="greeting"></h1>
   <nav>
-    <h1 id="greeting"></h1>
-    <ul>
-      <li>Everyday</li>
-      <li><a target="_blank" rel="noopener" href="https://www.kqed.org/radio">KQED Radio</a></li>
-      <li><a target="_blank" rel="noopener" href="https://mail.kqed.org/">Outlook Mail</a></li>
-      <li><a target="_blank" rel="noopener" href="https://mail.kqed.org/owa/#path=/calendar/view/Day">Outlook Calendar</a></li>
-      <li><a target="_blank" rel="noopener" href="https://jiratl.kqed.org/secure/RapidBoard.jspa?rapidView=96&view=detail&selectedIssue=KSM-4080&quickFilter=296">Jira Scrum Board</a></li>
-    </ul>
-    <ul>
-      <li>Repos</li>   
-      <li><a target="_blank" rel="noopener" href="https://github.com/KQED/kqed-main-site/">Main repo</a></li>
-      <li><a target="_blank" rel="noopener" href="https://github.com/KQED/frontend-training-pgilmour">Training repo</a></li>
-      <li><a target="_blank" rel="noopener" href="https://github.com/KQED/youth-media/pulls">Maia PRs</a></li>
-    </ul>
-    <ul>
-      <li>Tools</li>
-      <li><a target="_blank" rel="noopener" href="https://pomofocus.io/">Pomodoro Timer</a></li>
-      <li><a target="_blank" rel="noopener" href="https://docs.google.com/document/d/12D9MgkWGym6ie0YDyHS8MZ7Uwvlbd5mXOzxg5pdF6uE/edit#heading=h.ve1yp1420qcs">October Daily Work Log</a></li>
-      <li><a target="_blank" rel="noopener" href="https://drive.google.com/">Google Drive</a></li>
-    </ul>
-    <ul>
-      <li>Monitoring</li>
-      <li><a target="_blank" rel="noopener" href="https://wakatime.com/dashboard">WakaTime</a></li>
-      <li><a target="_blank" rel="noopener" href="https://www.spotify.com/">Spotify</a></li>
-      <li><a target="_blank" rel="noopener" href="https://bandcamp.com/pamelajane">Bandcamp</a></li>
-    </ul>
-    <ul>
-      <li>Housekeeping</li>
-      <li><a target="_blank" rel="noopener" href="https://kb.kqed.org/display/DIGINT/Coding+Best+Practices">Our Coding Practices</a></li>
-      <li><a target="_blank" rel="noopener" href="https://www.dayforcehcm.com/mydayforce/login.aspx">Dayforce</a></li>
-      <li><a target="_blank" rel="noopener" href="https://kb.kqed.org/dashboard.action">kb.kqed.org</a></li>
-      <li><a target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/r">G Cal - PTO</a></li>
-      <li><a target="_blank" rel="noopener" href="https://jiratl.kqed.org/plugins/servlet/desk/portal/4">IT Help Desk</a></li>
-      <li><a target="_blank" rel="noopener" href="https://flex.flextoday.com/Login.aspx">FlexToday Login</a></li>
-    </ul>
-    <ul>
-      <li>Learning</li>
-      <li><a target="_blank" rel="noopener" href="https://www.codewars.com/">CodeWars</a></li>
-      <li><a target="_blank" rel="noopener" href="https://www.codecademy.com/learn">Codecademy</a></li>
-    </ul>
+    <a target="_blank" rel="noopener" href="https://pomofocus.io/">Pomodoro Timer</a>
+    <a target="_blank" rel="noopener" href="https://www.kqed.org/radio">KQED Radio</a>
+    <a target="_blank" rel="noopener" href="https://mail.kqed.org/">Outlook Mail</a>
+    <a target="_blank" rel="noopener" href="https://www.spotify.com/">Spotify</a>
   </nav>
-    <!-- <footer>
-      <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
-        <iframe src="https://giphy.com/embed/qy8s6QF1d7owE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen>
+  <main class='container'>
+    <div class='left-column'>
+      <div class='sonny-angel-container'>
+        <iframe
+          src="https://giphy.com/embed/io5d28YEJMtEnbtfpZ"
+          frameBorder="0"
+          class='sonny-angel'
+        >
         </iframe>
       </div>
-      <p><a href="https://giphy.com/gifs/cartoonhangover-cartoon-hangover-fanart-ch-loves-qy8s6QF1d7owE">via GIPHY</a></p>
-    </footer> -->
+      <ul class='ul-one'>
+        <li><h2>Github Repos</h2></li>   
+        <li><a target="_blank" rel="noopener" href="https://github.com/KQED/kqed-main-site/">Main repo</a></li>
+        <li><a target="_blank" rel="noopener" href="https://github.com/KQED/frontend-training-pgilmour">Training repo</a></li>
+        <li><a target="_blank" rel="noopener" href="https://github.com/KQED/youth-media/pulls">Maia PRs</a></li>
+      </ul>
+      <ul class='ul-two'>
+        <li><h2>Focus Tools</h2></li>
+        <li><a target="_blank" rel="noopener" href="https://drive.google.com/">Google Drive</a></li>
+        <li><a target="_blank" rel="noopener" href="https://wakatime.com/dashboard">WakaTime</a></li>
+        <li><a target="_blank" rel="noopener" href="https://youtube.com">YouTube</a></li>
+        <li><a target="_blank" rel="noopener" href="https://www.spotify.com/">Spotify</a></li>
+        <li><a target="_blank" rel="noopener" href="https://bandcamp.com/pamelajane">Bandcamp</a></li>
+      </ul>
+      <ul>
+        <li><h3>Resources</h3></li>
+        <li><a target="_blank" rel="noopener" href="https://kb.kqed.org/display/DIGINT/Coding+Best+Practices">Our Coding Practices</a></li>
+        <li><a target="_blank" rel="noopener" href="https://www.dayforcehcm.com/mydayforce/login.aspx">Dayforce</a></li>
+        <li><a target="_blank" rel="noopener" href="https://kb.kqed.org/dashboard.action">kb.kqed.org</a></li>
+        <li><a target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/r">G Cal - PTO</a></li>
+        <li><a target="_blank" rel="noopener" href="https://jiratl.kqed.org/plugins/servlet/desk/portal/4">IT Help Desk</a></li>
+        <li><a target="_blank" rel="noopener" href="https://flex.flextoday.com/Login.aspx">FlexToday Login</a></li>
+      </ul>
+    </div>
+    <div class='main-content'>
+      <div class='top-block'>
+        <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
+          <iframe src="https://giphy.com/embed/qy8s6QF1d7owE" width="100%" height="100%" style="position:absolute;left:0;" frameBorder="0" class="giphy-embed" allowFullScreen>
+          </iframe>
+        </div>
+      </div>
+      <ul class='everyday'>
+        <li><h2>Everyday</h2></li>
+        <li><a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1HMV4-Ti2d2GmIjCWOH5wi4S-E3mGj3_THsUJWjyinQk/edit">December Daily Work Log</a></li>
+        <li><a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1bOtFPU1Q_7Q-DWEwzU6FvAckpVCacpMj1qtp-fDsIqs/edit">Neverember Daily Work Log</a></li>
+        <li><a target="_blank" rel="noopener" href="https://mail.kqed.org/owa/#path=/calendar/view/Day">Outlook Calendar</a></li>
+        <li><a target="_blank" rel="noopener" href="https://jiratl.kqed.org/secure/RapidBoard.jspa?rapidView=96&view=detail&selectedIssue=KSM-4080&quickFilter=296">Jira Scrum Board</a></li>
+        <li><a target="_blank" rel="noopener" href='https://www.facebook.com/groups/inventrkits'>meta group - inventr.io</a></li>
+        <li><a target="_blank" rel="noopener" href='https://inventr.io/courses/adventurekit30dayslostinspace-2023/'> inventr.io course materials</a></li>
+        <li><a target="_blank" rel="noopener" href='https://storage.pardot.com/1009792/1685141235Z8bRQIn3/Software_Architecture_Patterns.pdf'>Read: SW Arch Styles</a></li>
+        <li><a target="_blank" rel="noopener" href='https://auth0.openai.com/u/signup/identifier?state=hKFo2SA3VWxYSmI5aHdhZld4NlVPeTBReXFXS1VocjIwTGlPTKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDVmLTRmaGUwQTMtR2NYTndlOURscTlRVjlXU3luVkQxo2NpZNkgRFJpdnNubTJNdTQyVDNLT3BxZHR3QjNOWXZpSFl6d0Q'>OpenAI API Sign-in</a></li>
+      </ul>
+    </div>
+    <!-- <div>
+      <label for="userInput">Your message:</label>
+      <input type="text" id="userInput">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  
+    <div id="response"></div>
+  
+    <script>
+      async function sendMessage() {
+        const userInput = document.getElementById('userInput').value;
+        const responseDiv = document.getElementById('response');
+  
+        // Replace 'YOUR_API_KEY' with your actual OpenAI API key
+        const apiKey = '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';
+        const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+  
+        try {
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+              prompt: userInput,
+              max_tokens: 150
+            })
+          });
+  
+          const data = await response.json();
+          const answer = data.choices[0].text.trim();
+  
+          responseDiv.innerText = `ChatGPT says: ${answer}`;
+        } catch (error) {
+          console.error('Error fetching data:', error);
+          responseDiv.innerText = 'Error communicating with ChatGPT API.';
+        }
+      }
+    </script> -->
+  </main>
+  <footer
+    style='margin-top:30px;overflow:hidden;padding-bottom:200px;'
+  >
+    <div
+      style="width:100%;height:100%;position:relative;margin-top:-170px;"
+      class="footer-div"
+    >
+    <iframe
+      src="https://giphy.com/embed/PA5pAhOp5Y2Qg"
+      width="100%" 
+      height="250%" 
+      frameBorder="0" 
+      allowFullScreen
+      class="fang-gif"
+    >
+    </iframe>
+    </div>
+  </footer>
 </body>
 </html>
