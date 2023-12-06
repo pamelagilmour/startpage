@@ -65,8 +65,7 @@ nav a {
 a {
   font-family: 'Syne Mono', monospace;
   color:aliceblue;
-  text-decoration: line-through;
-
+  text-decoration: none;
 }
 
 a:hover {
